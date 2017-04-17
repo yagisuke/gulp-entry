@@ -1,0 +1,22 @@
+{
+  "name": "gulp-entry",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yagisuke/gulp-entry.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yagisuke/gulp-entry/issues"
+  },
+  "homepage": "https://github.com/yagisuke/gulp-entry#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
