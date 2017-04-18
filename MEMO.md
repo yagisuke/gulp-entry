@@ -10,7 +10,7 @@
 ##### すべてのフォルダからファイル拡張子指定
 ``gulp.src('./src/**/*.html')``
 ##### すべてのフォルダからファイル拡張子指定 + 操作したくないファイル指定
-``gulp.src('./src/**/*.html', './src/**/donotcopy.html')``
+``gulp.src('./src/**/*.html', '!./src/**/donotcopy.html')``
 
 ## ファイルのコピータスク
 ``gulp.src('./index.html').pipe(gulp.dest('./hoge'));``
