@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var pkg = require('./package.json');
 var imagemin = require('gulp-imagemin');
 var coffee = require('gulp-coffee');
 var concat = require('gulp-concat');
@@ -35,7 +36,7 @@ gulp.task('coffee', function() {
     .pipe(coffee())
     .pipe(concat('all-coffee.min.js'))
     .pipe(uglify())
-    .pipe(header('/* author @<%= codename %> */\n', { codename : 'yagisuke'}))
+    .pipe(header('/* author @<%= pkg.author %> */\n', { pkg : pkg}))
     .pipe(gulp.dest('./dist/js'));
 });
 
