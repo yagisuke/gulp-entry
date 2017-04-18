@@ -14,3 +14,9 @@
 
 ## ファイルのコピータスク
 ``gulp.src('./index.html').pipe(gulp.dest('./hoge'));``
+
+## 画像ファイルの最適化
+事前に以下のようにしてインストール
+``$ npm i -D gulp-imagemin``
+##### 画像最適化処理
+``gulp.src('./src/img/*').pipe(imagemin())``
