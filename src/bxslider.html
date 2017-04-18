@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>yagisuke | carousel - bxSlider</title>
+  <link rel="stylesheet" href="./css/bxslider.css" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="./js/jquery.bxslider.js"></script>
+</head>
+<body style="width: 940px; margin: 0 auto;">
+  <h1>carousel test room.</h1>
+  <h2>Bxslider</h2>
+  <cite>https://github.com/stevenwanderski/bxslider-4</cite>
+  <!-- carousel area -->
+  <ul class="bxslider">
+    <li><img src="https://dummyimage.com/930x400/aff/333&amp;text=IMAGE+1" width="930" height="400" /></li>
+    <li><img src="https://dummyimage.com/930x400/abf/333&amp;text=IMAGE+2" width="930" height="400" /></li>
+    <li><img src="https://dummyimage.com/930x400/abc/333&amp;text=IMAGE+3" width="930" height="400" /></li>
+    <li><img src="https://dummyimage.com/930x400/cba/333&amp;text=IMAGE+4" width="930" height="400" /></li>
+  </ul>
+  <script>
+    $(document).ready(function(){
+      $('.bxslider').bxSlider();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>yagisuke | carousel - glide</title>
+  <link rel="stylesheet" href="./css/glide.core.css" type="text/css" />
+  <link rel="stylesheet" href="./css/glide.theme.css" type="text/css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="./js/jquery.glide.js"></script>
+</head>
+<body style="width: 940px; margin: 0 auto;">
+  <h1>carousel test room.</h1>
+  <h2>glide</h2>
+  <cite>https://github.com/jedrzejchalubek/glidejs</cite>
+  <!-- carousel area -->
+  <div id="Glide" class="glide" style="height: 400px;">
+    <div class="glide__wrapper">
+      <ul class="glide__track">
+        <li class="glide__slide"><img src="https://dummyimage.com/940x400/aff/333&amp;text=IMAGE+1" width="940" height="400" /></li>
+        <li class="glide__slide"><img src="https://dummyimage.com/940x400/abf/333&amp;text=IMAGE+2" width="940" height="400" /></li>
+        <li class="glide__slide"><img src="https://dummyimage.com/940x400/abc/333&amp;text=IMAGE+3" width="940" height="400" /></li>
+        <li class="glide__slide"><img src="https://dummyimage.com/940x400/cba/333&amp;text=IMAGE+4" width="940" height="400" /></li>
+      </ul>
+    </div>
+    <div class="glide__arrows">
+      <button class="glide__arrow prev" data-glide-dir="<">prev</button>
+      <button class="glide__arrow next" data-glide-dir=">">next</button>
+    </div>
+    <div class="glide__bullets">&nbsp;</div>
+  </div>
+  <script>
+  $('#Glide').glide({
+    type: 'carousel'
+  });
+  </script>
+</body>
+</html>

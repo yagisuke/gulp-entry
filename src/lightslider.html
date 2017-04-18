@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>yagisuke | carousel - lightSlider</title>
+  <link rel="stylesheet" href="./css/lightslider.css" type="text/css" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="./js/jquery.lightslider.js"></script>
+</head>
+<body style="width: 940px; margin: 0 auto;">
+  <h1>carousel test room.</h1>
+  <h2>jQuery lightSlider</h2>
+  <cite>https://github.com/sachinchoolur/lightslider</cite>
+  <!-- carousel area -->
+  <h3>colum1</h3>
+  <ul id="lightSlider1">
+    <li><img src="https://dummyimage.com/940x400/aff/333&amp;text=IMAGE+1" height="400" /></li>
+    <li><img src="https://dummyimage.com/940x400/abf/333&amp;text=IMAGE+2" height="400" /></li>
+    <li><img src="https://dummyimage.com/940x400/abc/333&amp;text=IMAGE+3" height="400" /></li>
+    <li><img src="https://dummyimage.com/940x400/cba/333&amp;text=IMAGE+4" height="400" /></li>
+  </ul>
+  <h3>colum2</h3>
+  <ul id="lightSlider2">
+    <li><img src="https://dummyimage.com/470x400/aff/333&amp;text=IMAGE+1" height="400" /></li>
+    <li><img src="https://dummyimage.com/470x400/abf/333&amp;text=IMAGE+2" height="400" /></li>
+    <li><img src="https://dummyimage.com/470x400/abc/333&amp;text=IMAGE+3" height="400" /></li>
+    <li><img src="https://dummyimage.com/470x400/cba/333&amp;text=IMAGE+4" height="400" /></li>
+  </ul>
+  <h3>colum3</h3>
+  <ul id="lightSlider3">
+    <li data-thumb="https://dummyimage.com/85x40/aff/333&amp;text=IMAGE+1"><img src="https://dummyimage.com/306x400/aff/333&amp;text=IMAGE+1" height="400" /></li>
+    <li data-thumb="https://dummyimage.com/85x40/abf/333&amp;text=IMAGE+2"><img src="https://dummyimage.com/306x400/abf/333&amp;text=IMAGE+2" height="400" /></li>
+    <li data-thumb="https://dummyimage.com/85x40/abc/333&amp;text=IMAGE+3"><img src="https://dummyimage.com/306x400/abc/333&amp;text=IMAGE+3" height="400" /></li>
+    <li data-thumb="https://dummyimage.com/85x40/bff/333&amp;text=IMAGE+4"><img src="https://dummyimage.com/306x400/bff/333&amp;text=IMAGE+4" height="400" /></li>
+    <li data-thumb="https://dummyimage.com/85x40/bcf/333&amp;text=IMAGE+5"><img src="https://dummyimage.com/306x400/bcf/333&amp;text=IMAGE+5" height="400" /></li>
+    <li data-thumb="https://dummyimage.com/85x40/bcd/333&amp;text=IMAGE+6"><img src="https://dummyimage.com/306x400/bcd/333&amp;text=IMAGE+6" height="400" /></li>
+    <li data-thumb="https://dummyimage.com/85x40/cff/333&amp;text=IMAGE+7"><img src="https://dummyimage.com/306x400/cff/333&amp;text=IMAGE+7" height="400" /></li>
+    <li data-thumb="https://dummyimage.com/85x40/cdf/333&amp;text=IMAGE+8"><img src="https://dummyimage.com/306x400/cdf/333&amp;text=IMAGE+8" height="400" /></li>
+    <li data-thumb="https://dummyimage.com/85x40/cde/333&amp;text=IMAGE+9"><img src="https://dummyimage.com/306x400/cde/333&amp;text=IMAGE+9" height="400" /></li>
+    <li data-thumb="https://dummyimage.com/85x40/dff/333&amp;text=IMAGE+10"><img src="https://dummyimage.com/306x400/dff/333&amp;text=IMAGE+10" height="400" /></li>
+    <li data-thumb="https://dummyimage.com/85x40/def/333&amp;text=IMAGE+11"><img src="https://dummyimage.com/306x400/def/333&amp;text=IMAGE+11" height="400" /></li>
+    <li data-thumb="https://dummyimage.com/85x40/eff/333&amp;text=IMAGE+12"><img src="https://dummyimage.com/306x400/eff/333&amp;text=IMAGE+12" height="400" /></li>
+  </ul>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#lightSlider1").lightSlider({
+        item: 1,
+        auto: true,
+        loop: true
+      });
+      $("#lightSlider2").lightSlider({
+        item: 2,
+        slideMargin: 0,
+        auto: true,
+        loop: true
+      });
+      $("#lightSlider3").lightSlider({
+        item: 3,
+        slideMargin: 10,
+        auto: true,
+        loop: true,
+        vThumbWidth: 85,
+        gallery: true,
+        thumbItem: 10,
+        thumbMargin: 10
+      });
+    });
+  </script>
+</body>
+</html>
