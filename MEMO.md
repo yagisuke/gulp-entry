@@ -31,3 +31,6 @@
 ``$ npm i -D gulp-coffee``
 指定方法は以下のように
 ``gulp.src('./src/coffee/*.coffee').pipe(coffee()).pipe(concat('all-coffee.min.js')).pipe(uglify())``
+
+## watch
+``gulp.watch('./src/target.file', ['taskName']);``

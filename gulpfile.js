@@ -34,4 +34,9 @@ gulp.task('coffee', function() {
     .pipe(gulp.dest('./dist/js'));
 });
 
-gulp.task('default', ['html', 'img', 'js', 'coffee']);
+// coffeeスクリプトが変更された時に、coffeeタスクを実施するようにwatch
+gulp.task('coffee_watch', function() {
+  gulp.watch('./src/coffee/*.coffee', ['coffee']);
+});
+
+gulp.task('default', ['html', 'img', 'js', 'coffee', 'coffee_watch']);
