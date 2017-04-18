@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var imagemin = require('gulp-imagemin');
+var coffee = require('gulp-coffee');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 
@@ -24,4 +25,13 @@ gulp.task('js', function() {
     .pipe(gulp.dest('./dist/js'));
 });
 
-gulp.task('default', ['html', 'img', 'js']);
+// coffeeスクリプトを結合して圧縮してコピー
+gulp.task('coffee', function() {
+  gulp.src('./src/coffee/*.coffee')
+    .pipe(coffee())
+    .pipe(concat('all-coffee.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./dist/js'));
+});
+
+gulp.task('default', ['html', 'img', 'js', 'coffee']);

@@ -26,3 +26,8 @@
 ``$ npm i -D gulp-concat gulp-uglify``
 ##### ファイルを結合して圧縮
 ``gulp.src('./src/js/*.js').pipe(concat('all.min.js')).pipe(uglify())``
+##### coffeeスクリプト対応
+事前に以下のようにしてインストール
+``$ npm i -D gulp-coffee``
+指定方法は以下のように
+``gulp.src('./src/coffee/*.coffee').pipe(coffee()).pipe(concat('all-coffee.min.js')).pipe(uglify())``
