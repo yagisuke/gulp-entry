@@ -4,6 +4,7 @@ var coffee = require('gulp-coffee');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var plumber = require('gulp-plumber');
+var header = require('gulp-header');
 
 // htmlファイルをdistディレクトリにコピー
 gulp.task('html', function() {
@@ -23,6 +24,7 @@ gulp.task('js', function() {
   gulp.src('./src/js/*.js')
     .pipe(concat('all.min.js'))
     .pipe(uglify())
+    .pipe(header('/* author @yagisuke */\n'))
     .pipe(gulp.dest('./dist/js'));
 });
 
@@ -33,6 +35,7 @@ gulp.task('coffee', function() {
     .pipe(coffee())
     .pipe(concat('all-coffee.min.js'))
     .pipe(uglify())
+    .pipe(header('/* author @<%= codename %> */\n', { codename : 'yagisuke'}))
     .pipe(gulp.dest('./dist/js'));
 });
 

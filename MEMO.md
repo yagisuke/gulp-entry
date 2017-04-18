@@ -42,3 +42,11 @@ defaultではエラーが出るとwatchのような継続し続けるタスク�
 ``$ npm i -D gulp-plumber``
 エラーが出そうなところにplumber()を追加<br>
 ``gulp.src('./src/coffee/*.coffee').pipe(plumber()).pipe(coffee())...etc``
+
+## ファイルの先頭にauthorとかつけるためのもの
+事前に以下のようにしてインストール<br>
+``$ npm i -D gulp-header``
+##### ベタ書きタイプ
+``gulp.src('./src/js/*.js').pipe(header('/* author hoge */\n'))``
+##### 置換タイプ
+``gulp.src('./src/coffee/*.coffee').pipe(header('/* author <%= name %> */\n', {name : 'hoge'}))``
