@@ -20,3 +20,9 @@
 ``$ npm i -D gulp-imagemin``
 ##### 画像最適化処理
 ``gulp.src('./src/img/*').pipe(imagemin())``
+
+## スクリプトの最適化（minify + ファイル）
+事前に以下のようにしてインストール
+``$ npm i -D gulp-concat gulp-uglify``
+##### ファイルを結合して圧縮
+``gulp.src('./src/js/*.js').pipe(concat('all.min.js')).pipe(uglify())``
