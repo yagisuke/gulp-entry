@@ -3,6 +3,7 @@ var imagemin = require('gulp-imagemin');
 var coffee = require('gulp-coffee');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var plumber = require('gulp-plumber');
 
 // htmlファイルをdistディレクトリにコピー
 gulp.task('html', function() {
@@ -28,6 +29,7 @@ gulp.task('js', function() {
 // coffeeスクリプトを結合して圧縮してコピー
 gulp.task('coffee', function() {
   gulp.src('./src/coffee/*.coffee')
+    .pipe(plumber())
     .pipe(coffee())
     .pipe(concat('all-coffee.min.js'))
     .pipe(uglify())
