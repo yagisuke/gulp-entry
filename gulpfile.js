@@ -6,6 +6,7 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var plumber = require('gulp-plumber');
 var header = require('gulp-header');
+var webserver = require('gulp-webserver');
 
 // htmlファイルをdistディレクトリにコピー
 gulp.task('html', function() {
@@ -40,9 +41,19 @@ gulp.task('coffee', function() {
     .pipe(gulp.dest('./dist/js'));
 });
 
-// coffeeスクリプトが変更された時に、coffeeタスクを実施するようにwatch
-gulp.task('coffee_watch', function() {
+// 監視
+gulp.task('watch', function() {
+  gulp.watch('./src/*.html', ['html']);
+  gulp.watch('./src/js/*.js', ['js']);
   gulp.watch('./src/coffee/*.coffee', ['coffee']);
 });
 
-gulp.task('default', ['html', 'img', 'js', 'coffee', 'coffee_watch']);
+gulp.task('webserver', function() {
+  gulp.src('./dist')
+    .pipe(webserver({
+      host: 'TODO: IPアドレスに置換',
+      livereload: true
+    }));
+});
+
+gulp.task('default', ['html', 'img', 'js', 'coffee', 'watch', 'webserver']);

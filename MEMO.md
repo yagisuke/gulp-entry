@@ -50,3 +50,17 @@ defaultではエラーが出るとwatchのような継続し続けるタスク�
 ``gulp.src('./src/js/*.js').pipe(header('/* author hoge */\n'))``
 ##### 置換タイプ
 ``gulp.src('./src/coffee/*.coffee').pipe(header('/* author <%= name %> */\n', {name : 'hoge'}))``
+
+## livereload
+事前に以下のようにしてインストール<br>
+``$ npm i -D gulp-webserver``
+sample source
+```
+gulp.task('webserver', function() {
+  gulp.src('./dist')
+    .pipe(webserver({
+      host: 'TODO: IPアドレスに置換',
+      livereload: true
+    }));
+});
+```
